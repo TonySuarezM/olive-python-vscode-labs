@@ -1,0 +1,20 @@
+# Requisitos base del curso (CPU por defecto)
+# Olive recomienda instalar Olive y un build de ONNX Runtime.
+# Con el extra [cpu], Olive instala ONNX Runtime (CPU) como dependencia extra.
+olive-ai[cpu]
+
+# Kernel de Python para ejecutar notebooks (y depuración en notebooks, según VS Code requiere ipykernel 6+)
+ipykernel
+
+# --- Opcionales (descomenta si lo necesitas) ---
+# Soporte GPU (CUDA) en Olive (instala onnxruntime-gpu como extra de Olive)
+# olive-ai[gpu]
+
+# DirectML (Windows) en Olive (instala onnxruntime-directml como extra de Olive)
+# olive-ai[directml]
+
+# Integración con Docker en Olive
+# olive-ai[docker]
+
+# Integración con AzureML en Olive
+# olive-ai[azureml]
