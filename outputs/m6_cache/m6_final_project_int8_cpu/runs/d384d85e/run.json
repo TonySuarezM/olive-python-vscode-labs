@@ -1,0 +1,14 @@
+{
+    "input_model_id": "8b85e52c",
+    "pass_name": "onnxopversionconversion",
+    "pass_config": {
+        "target_opset": 11,
+        "save_as_external_data": false,
+        "all_tensors_to_one_file": true,
+        "external_data_name": null,
+        "size_threshold": 1024,
+        "convert_attribute": false
+    },
+    "accelerator_spec": null,
+    "output_model_id": "d384d85e"
+}
