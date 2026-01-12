@@ -1,0 +1,1 @@
+[RunHistory(model_id='b080aca3', parent_model_id=None, from_pass=None, duration_sec=None, metrics=None), RunHistory(model_id='a831fb32', parent_model_id='b080aca3', from_pass='onnxdynamicquantization', duration_sec=0.0766000747680664, metrics=None)]

@@ -1,0 +1,41 @@
+{
+  "workflow_id": "m3_linear_quant_dynamic",
+  "input_model": {
+    "type": "ONNXModel",
+    "config": {
+      "model_path": "g:\\source\\VisualCode\\repos\\olive-python-vscode-labs\\models\\linear_fp32.onnx"
+    }
+  },
+  "systems": {
+    "local_system": {
+      "type": "LocalSystem",
+      "config": {
+        "accelerators": [
+          {
+            "device": "cpu",
+            "execution_providers": [
+              "CPUExecutionProvider"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "passes": {
+    "quant_int8": {
+      "type": "OnnxDynamicQuantization",
+      "config": {
+        "quant_mode": "dynamic",
+        "weight_type": "QInt8"
+      }
+    }
+  },
+  "engine": {
+    "host": "local_system",
+    "target": "local_system",
+    "cache_dir": "g:\\source\\VisualCode\\repos\\olive-python-vscode-labs\\outputs\\m3_cache",
+    "output_dir": "g:\\source\\VisualCode\\repos\\olive-python-vscode-labs\\outputs\\m3_linear_int8",
+    "log_severity_level": 0,
+    "evaluate_input_model": false
+  }
+}
