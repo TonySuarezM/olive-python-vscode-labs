@@ -3,7 +3,7 @@
   "input_model": {
     "type": "ONNXModel",
     "config": {
-      "model_path": "g:\\source\\VisualCode\\repos\\olive-python-vscode-labs\\models\\add_const.onnx"
+      "model_path": "c:\\source\\VisualCode\\repos\\olive-python-vscode-labs\\models\\add_const.onnx"
     }
   },
   "systems": {
@@ -36,8 +36,8 @@
   "engine": {
     "host": "local_system",
     "target": "local_system",
-    "cache_dir": "g:\\source\\VisualCode\\repos\\olive-python-vscode-labs\\outputs\\m2_cache",
-    "output_dir": "g:\\source\\VisualCode\\repos\\olive-python-vscode-labs\\outputs\\m2_add_const",
+    "cache_dir": "c:\\source\\VisualCode\\repos\\olive-python-vscode-labs\\outputs\\m2_cache",
+    "output_dir": "c:\\source\\VisualCode\\repos\\olive-python-vscode-labs\\outputs\\m2_add_const",
     "log_severity_level": 0,
     "evaluate_input_model": false
   }

@@ -1,0 +1,42 @@
+{
+  "workflow_id": "m7_phi4_cpu_int8",
+  "input_model": {
+    "type": "HfModel",
+    "model_path": "microsoft/Phi-4-mini-instruct"
+  },
+  "systems": {
+    "local_system": {
+      "type": "LocalSystem",
+      "config": {
+        "accelerators": [
+          {
+            "device": "cpu",
+            "execution_providers": [
+              "CPUExecutionProvider"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "passes": {
+    "convert_to_onnx": {
+      "type": "OnnxConversion",
+      "config": {
+        "target_opset": 17
+      }
+    },
+    "quant_int8_dynamic": {
+      "type": "OnnxDynamicQuantization",
+      "config": {}
+    }
+  },
+  "engine": {
+    "host": "local_system",
+    "target": "local_system",
+    "cache_dir": "..\\outputs\\m7_phi4\\cache",
+    "output_dir": "..\\outputs\\m7_phi4\\out_cpu_int8",
+    "log_severity_level": 0,
+    "evaluate_input_model": false
+  }
+}
